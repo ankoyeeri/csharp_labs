@@ -1,0 +1,7 @@
+        //  Методы расширения
+        //  Добавление точки в конце строки
+        //public Set<string> DotInTheEnd(Set<string> set)
+        //{
+        //    set.collection[collection.Count - 1] += ".";
+        //    return set;
+        //}

@@ -1,0 +1,109 @@
+    public class Set<T> : IEnumerable<T>
+    {
+        private List<T> _items = new List<T>();     // Коллекция хранимых данных
+
+        public int Count => _items.Count;           //  Количество элементов
+
+
+        public void Add(T item )        //  Добавить данные во множество
+        {
+            if(item == null)    //  Проверка данных на пустоту
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            if(!_items.Contains(item))  //  Проверка элемента на уникальность. Если схожестей не нашли - записываем
+            {
+                _items.Add(item);
+            }
+        }
+
+        public void Remove(T item)      //  Удалить элемент из множества 
+        {
+            if(item == null)    //  Проверка элемента на пустоту
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+            if(! _items.Contains(item)) //  Проверка на наличие элемента в множестве
+            {
+                throw new KeyNotFoundException($"{item} не найден в множестве");
+            }
+
+            _items.Remove(item);    //  Удаление элемент множества
+        }
+
+        public static  Set<T> Union(Set<T> set1, Set<T> set2)       //  Объединение множеств
+        {
+            //  Проверка на пустоту у двух множеств
+            if(set1 == null)
+            {
+                throw new ArgumentNullException(nameof(set1));
+            }
+            if(set2 == null)
+            {
+                throw new ArgumentNullException(nameof(set1));
+            }
+
+            var resSet = new Set<T>();  //  Результирующее множество
+
+            var items = new List<T>();  //  Элементы данных результирующего множества 
+
+            // Если входное множество содержит элементы данных, то добавляем их в результирующее множество
+            if(set1._items != null && set1._items.Count > 0 )
+            {
+                items.AddRange(new List<T>(set1._items));
+            }
+            if(set2._items != null && set2._items.Count > 0)
+            {
+                items.AddRange(new List<T>(set2._items));
+            }
+
+            resSet._items = items.Distinct().ToList();
+
+            return resSet;
+        }
+
+        public static Set<T> Difference(Set<T> set1, Set<T> set2)   //  Разность множества
+        {
+            if(set1 == null)
+            {
+                throw new ArgumentNullException(nameof(set1));
+            }
+            if(set2 == null)
+            {
+                throw new ArgumentNullException(nameof(set2));
+            }
+
+            var resSet = new Set<T>();  //  Результирующее множество
+
+            foreach(var item in set1._items)    //  Проход по всем элементам мнодества
+            {
+                if(!set2._items.Contains(item)) //  Проверка на наличие элемента во втором множестве
+                {
+                    resSet.Add(item);
+                }
+            }
+        }
+
+        public static Set<T> Intersection(Set<T> set1, Set<T> set2) // Пересечение множеств
+        {
+
+        }
+
+        public static bool Subset(Set<T> set1, Set<T> set2)         //  Проверка на подмножество
+        {
+
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+
+            return _items.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _items.GetEnumerator();
+        }
+
+    }
