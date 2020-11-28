@@ -16,9 +16,9 @@ namespace Lab5
             //ObjCaller.Start();
             //ObjCaller.ObjViaRefInterface();
             //ObjCaller.CheckMethod();
-            ObjCaller.DefBouquet();
+            //ObjCaller.DefBouquet();
             //ObjCaller.CallSort();
-            //ObjCaller.CallStruct();
+            ObjCaller.CallStruct();
         }
     }
 }

@@ -211,6 +211,9 @@ namespace Lab5
             sampleStruct.field2 = "Test";
             sampleStruct.field4 = 2.4;
             Console.WriteLine($"Структура\n{sampleStruct.filed1}\n{sampleStruct.field2}\n{sampleStruct.field4}\n");
+
+            SampleStruct sampleStruct1 = new SampleStruct(1, "test2", 2.2);
+            Console.WriteLine($"Структура\n{sampleStruct1.filed1}\n{sampleStruct1.field2}\n{sampleStruct1.field4}\n");
         }
     }
 }

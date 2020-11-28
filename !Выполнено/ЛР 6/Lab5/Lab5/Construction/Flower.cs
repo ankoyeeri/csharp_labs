@@ -49,22 +49,6 @@ namespace Lab5.Construction
         /// </summary>
         public Colors Color { get; set; }
 
-        /// <summary>
-        /// Перечисление
-        /// </summary>
-
-
-        //private string ColorGainer(int value)
-        //{
-        //    Colors colors;
-        //    string color = "";
-
-        //    colors = (Colors)value;
-        //    color = Convert.ToString(colors);
-
-        //    return color;
-        //}
-
         public override void Note()
         {
             Console.WriteLine("Это цветок.");
