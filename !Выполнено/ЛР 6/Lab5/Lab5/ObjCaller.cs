@@ -203,5 +203,14 @@ namespace Lab5
             BouquetController.SortListByParam(bouquet);
             BouquetController.FindByColor(bouquet);
         }
+
+        public static void CallStruct()
+        {
+            SampleStruct sampleStruct = new SampleStruct();
+            sampleStruct.filed1 = 1;
+            sampleStruct.field2 = "Test";
+            sampleStruct.field4 = 2.4;
+            Console.WriteLine($"Структура\n{sampleStruct.filed1}\n{sampleStruct.field2}\n{sampleStruct.field4}\n");
+        }
     }
 }

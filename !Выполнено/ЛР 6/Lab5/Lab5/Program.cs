@@ -9,8 +9,6 @@ namespace Lab5
 {
     //  Вариант 4
     //  Растение, Куст, Цветок, Роза, Гладиолус, Кактус, Бумага, Букет
-    
-    //  НЕ ЗАБЫТЬ ДОБАВИТЬ СТРУКТУРУ
     class Program
     {
         static void Main(string[] args)
@@ -20,6 +18,7 @@ namespace Lab5
             //ObjCaller.CheckMethod();
             ObjCaller.DefBouquet();
             //ObjCaller.CallSort();
+            //ObjCaller.CallStruct();
         }
     }
 }
