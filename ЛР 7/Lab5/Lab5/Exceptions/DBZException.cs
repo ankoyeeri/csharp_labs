@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Lab5.Exceptions
 {
-    class IncorrectFormatException : Exception
+    class DBZException : Exception
     {
-        public IncorrectFormatException()
+        public DBZException()
+            : base("Деление на 0")
         {
 
         }

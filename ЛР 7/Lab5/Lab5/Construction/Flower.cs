@@ -31,7 +31,7 @@ namespace Lab5.Construction
                 }
                 else
                 {
-                    Console.WriteLine("Недопустимое значение!");
+                    throw new Lab5.Exceptions.IncorrectValueException(nameof(Size));
                 }
             }
         }
@@ -48,22 +48,6 @@ namespace Lab5.Construction
         /// </list>
         /// </summary>
         public Colors Color { get; set; }
-
-        /// <summary>
-        /// Перечисление
-        /// </summary>
-
-
-        //private string ColorGainer(int value)
-        //{
-        //    Colors colors;
-        //    string color = "";
-
-        //    colors = (Colors)value;
-        //    color = Convert.ToString(colors);
-
-        //    return color;
-        //}
 
         public override void Note()
         {

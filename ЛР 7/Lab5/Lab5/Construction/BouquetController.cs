@@ -15,6 +15,11 @@ namespace Lab5.Construction
         /// <param name="bouquet"></param>
         public static void SortListByParam(Bouquet bouquet)
         {
+            if(bouquet == null)
+            {
+                throw new Lab5.Exceptions.ArgNullException(nameof(bouquet));
+            }
+
             int counter = 0;
             string paramName = null;
             bool flagLoop = true;
@@ -25,7 +30,7 @@ namespace Lab5.Construction
                 $"\n2) {nameof(bouquet.Size)}\n3) {nameof(bouquet.Color)}");
                 Console.Write("---> ");
 
-                int choise = Convert.ToInt32(Console.ReadLine());
+                int? choise = Convert.ToInt32(Console.ReadLine());
 
                 switch (choise)
                 {
@@ -42,8 +47,14 @@ namespace Lab5.Construction
                         paramName = nameof(bouquet.Color);
                         break;
                     default:
-                        Console.WriteLine("\nПроверьте вводимое число\n");
-                        break;
+                        if(choise == null)
+                        {
+                            throw new Lab5.Exceptions.ArgNullException(nameof(choise));
+                        }
+                        else
+                        {
+                            throw new Lab5.Exceptions.IncorrectValueException(nameof(choise));
+                        }
                 }
 
                 Console.WriteLine($"\nСортировка по {paramName}");

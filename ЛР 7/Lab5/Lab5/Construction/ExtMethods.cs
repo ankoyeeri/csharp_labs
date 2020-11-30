@@ -27,7 +27,7 @@ namespace Lab5.Construction
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("Проверьте введенное значение");
+                        throw new Lab5.Exceptions.IncorrectValueException("Неверно введено значение");
                         Console.ReadKey();
                         Console.Clear();
                         break;
