@@ -11,7 +11,7 @@ namespace Lab04
     /// Класс множество Set
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Set<T> : IEnumerable<T>
+    public class Set<T> : IEnumerable<T>, CommonInterface<T>
     {
         private List<T> collection = new List<T>();
 
@@ -33,6 +33,19 @@ namespace Lab04
             collection.Remove(element);
         }
 
+        public void ShowList()
+        {
+            Console.WriteLine("Show list: ");
+
+            foreach(T item in collection)
+            {
+                Console.Write($" {item} ");
+            }
+            Console.WriteLine();
+        }
+
+
+
         /// <summary>
         /// Перегрузка операции "-" - удалить элемент из множества
         /// </summary>
@@ -41,6 +54,10 @@ namespace Lab04
         /// <returns></returns>
         public static Set<T> operator -(Set<T> set, T element)
         {
+            if(element == null)
+            {
+                throw new Lab04.Exceptions.NullElement();
+            }
             set.Remove(element);
             return set;
         }
