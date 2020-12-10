@@ -6,7 +6,9 @@ namespace Lab09
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //CallDelegates.Start();
+            Func<string, char> op;
+            op = StringProc.DeleteCurrentSymbol;
         }
     }
 }
