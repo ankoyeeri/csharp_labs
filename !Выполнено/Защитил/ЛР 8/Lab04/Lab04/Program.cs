@@ -18,10 +18,10 @@ namespace Lab04
 
             var collection2 = new Set<int>() { 4, 6, 9, 7, 0 };
             var collection3 = new Set<int>() { 1, 2, 3 };
-            var collectionStr = new Set<string>() { "test", "123", null, "here_must_be_a_dot" };
+            var collectionStr = new Set<string>() { "test", "123", "test", "here_must_be_a_dot" };
 
 
-            //CallFunctions.Menu();
+            CallFunctions.Menu();
 
             //GenericClass.Comparator(collection1, collectionComp);
 

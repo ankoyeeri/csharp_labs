@@ -1,0 +1,18 @@
+1. Создан обобщенный интерфейс - CommonInterface.cs
+2. Создан обобщенный тип (класс) из лабораторной работы 4 - Set.cs.
+   В нем наследуем интерфейс CommonInterface<T>.
+
+   Добавлена обработка исключений: Папка Exceptions, 
+   Классы пользовательских ошибок: BadFormat.cs, NullElement.cs 
+   Функциям Add, Remove, operator - добавлена проверка на ошибку
+   NullElement.cs 
+
+   Создан класс CallFunctions.cs, который имеет меню с функциями вызова
+   других функций.
+3. Из лабораторной работы 5 д обавлена пака Construction
+   Классы: Flower, Plant
+   В классе Program: добавлен класс GenericClass с функцией Comparator),
+   эта функция используется в классе Program.
+4. Класс TypeWriter.css
+   Метод WriteType. Записывает текущий тип в файл GenericTypes.txt
+   

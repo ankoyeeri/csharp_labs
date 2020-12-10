@@ -48,6 +48,8 @@ namespace Lab04
                         case 10:
                             CallCheck();
                             break;
+                        default:
+                            throw new Lab04.Exceptions.BadFormat($"{nameof(choise)}, введено неправильное значение.\n");
                     }
                     Console.WriteLine();
                     Console.ReadLine();
@@ -74,9 +76,18 @@ namespace Lab04
 
         public static void CallShowList()
         {
-            var collection1 = new Set<int>() { 1, 5, 2, 8, 3 };
+            try
+            {
+                var collection1 = new Set<int>() { 1, 5, 2, 8, 3 };
 
-            collection1.ShowList();
+                collection1.ShowList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public static void CallExtMethod2()
@@ -136,14 +147,26 @@ namespace Lab04
 
         public static void CallAdd()
         {
-            var collection1 = new Set<int>() { 1, 5, 2, 8, 3 };
-            collection1.Add(7);     //  Добавление элемента
-
-            Console.WriteLine("\n\ncollection1:");
-            foreach (int item in collection1)
+            try
             {
-                Console.Write($"{item} ");
+                Set<int> collection1 = null;
+                collection1.Add(7);     //  Добавление элемента
+
+                Console.WriteLine("\n\ncollection1:");
+                foreach (int item in collection1)
+                {
+                    Console.Write($"{item} ");
+                }
             }
+            catch (Lab04.Exceptions.NullElement e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Выполнение завершено");
+            }
+
         }
 
         public static void CallDeleteElement()

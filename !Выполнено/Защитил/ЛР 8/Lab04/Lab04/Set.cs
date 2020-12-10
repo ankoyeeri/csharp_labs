@@ -21,6 +21,11 @@ namespace Lab04
         /// <param name="element"></param>
         public void Add(T element)
         {
+            if(element == null)
+            {
+                throw new Lab04.Exceptions.NullElement();
+            }
+
             collection.Add(element);
         }
 
@@ -30,6 +35,11 @@ namespace Lab04
         /// <param name="element"></param>
         public void Remove(T element)
         {
+            if (element == null)
+            {
+                throw new Lab04.Exceptions.NullElement();
+            }
+
             collection.Remove(element);
         }
 
