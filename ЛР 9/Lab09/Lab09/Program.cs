@@ -6,9 +6,8 @@ namespace Lab09
     {
         static void Main(string[] args)
         {
-            //CallDelegates.Start();
-            Func<string, char> op;
-            op = StringProc.DeleteCurrentSymbol;
+            CallDelegates.Start();
+            CallFunction.Menu();
         }
     }
 }
