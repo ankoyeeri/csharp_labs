@@ -21,7 +21,7 @@ namespace Lab04
             var collectionStr = new Set<string>() { "test", "123", "test", "here_must_be_a_dot" };
 
 
-            CallFunctions.Menu();
+            //CallFunctions.Menu();
 
             //GenericClass.Comparator(collection1, collectionComp);
 
