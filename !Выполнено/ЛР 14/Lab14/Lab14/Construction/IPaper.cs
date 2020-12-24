@@ -8,6 +8,6 @@ namespace Lab14.Construction
     interface IPaper
     {
         string Color { get; set; }
-        void Note();
+        public void Note();
     }
 }

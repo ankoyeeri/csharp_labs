@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Lab14.Construction
 {
+    [Serializable]
     public class Flower : Plant
     {
         private double size;
