@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Lab13
 {
@@ -11,21 +12,26 @@ namespace Lab13
             GYMDirInfo.Notify += GYMLog.WriteEvent;
             GYMFileManager.Notify += GYMLog.WriteEvent;
 
-            GYMDiskInfo.GetFreeSpace();
-            GYMDiskInfo.GetFileSystem();
-            GYMDiskInfo.GetDiskInfo();
+            string file = "gymlogfile.txt";
+            Console.WriteLine($"Get full path: {Path.GetFullPath(file)}");
+            Console.WriteLine($"Get extension: {Path.GetExtension(file)}");
+            Console.WriteLine($"Get file name: {Path.GetFileName(file)}");
 
-            GYMFileInfo.GetFullPath();
-            GYMFileInfo.GetFileSize();
-            GYMFileInfo.GetDateOfFile();
+            //GYMDiskInfo.GetFreeSpace();
+            //GYMDiskInfo.GetFileSystem();
+            //GYMDiskInfo.GetDiskInfo();
 
-            GYMDirInfo.GetNumberOfFiles();
-            GYMDirInfo.GetTimeOfCreate();
-            GYMDirInfo.GetNumOfSubDirrectories();
-            GYMDirInfo.ShowParentDirectories();
+            //GYMFileInfo.GetFullPath();
+            //GYMFileInfo.GetFileSize();
+            //GYMFileInfo.GetDateOfFile();
 
-            //GYMLog.GetNumberOfNotes();
-            //GYMLog.DeleteDataByTime();
+            //GYMDirInfo.GetNumberOfFiles();
+            //GYMDirInfo.GetTimeOfCreate();
+            //GYMDirInfo.GetNumOfSubDirrectories();
+            //GYMDirInfo.ShowParentDirectories();
+
+            GYMLog.GetNumberOfNotes();
+            GYMLog.DeleteDataByTime();
 
             bool flag = true;
             int i = 1;
@@ -76,7 +82,6 @@ namespace Lab13
                         break;
                 }
             }
-
         }
 
         public static void ClickToContinue()
