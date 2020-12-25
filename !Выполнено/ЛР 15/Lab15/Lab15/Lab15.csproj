@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountOperator.cs" />
+    <Compile Include="FunctionController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,7 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\ProcessLogFile.txt" />
-    <Content Include="ProcessLogFile.txt" />
+    <Content Include="bin\Debug\Task4.txt" />
+    <Content Include="bin\Debug\ThreadFuncFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
